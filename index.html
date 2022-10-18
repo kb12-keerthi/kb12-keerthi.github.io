@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ken">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Delivery Cube</title>
+
+        <!--Icons-->
+        <link href="./Design/restaurantLogo.png" rel="icon" >
+
+        <!--Bootstrap css-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <!--main css-->
+        <link href="./assets/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-light navbar-expand-md fixed-top" style="background-color: white;">
+            <div class="container-fluid navigation">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="./Design/restaurantLogo.png" alt="Logo" width="40px" height="40px"><span>Delivery Cube</span>
+                </a>
+                <!--hamburger-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="Navbar">
+                    <ul class="nav navbar-nav">
+                        <div class="ms-3 ms-lg-5">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="ms-3 ms-lg-5"> 
+                            <li class="nav-item">
+                                <a href="#explore" class="nav-link">
+                                    <span>Restaurants</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="ms-3 ms-lg-5">
+                            <li class="nav-item">
+                                <a href="#food" class="nav-link">
+                                    <span>Foods</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <div class="ms-3 ms-lg-5 mt-1">
+                            <li class="nav-item">
+                                <div class="input-group" onclick="arrow()">
+                                    <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                                    <div class="dropdown">
+                                        <select name="location" id="location" class="form-control" style="border: none; cursor: pointer">
+                                            <option value="ny">New York, USA</option>
+                                            <option value="madrid">Madrid, Spain</option>
+                                            <option value="abu">Abu Dhabi, UAE</option>
+                                            <option value="kolkata">Kolkata, India</option>
+                                        </select>
+                                        <div class="point" style="pointer-events: none;"><i class="arrow fa fa-chevron-down"></i></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="ms-3 ms-lg-2 mt-1">
+                            <li class="nav-item">
+                                <button type="button" class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            </li>
+                        </div>
+                        <div class="ms-3 ms-lg-2 mt-1">
+                            <li class="nav-item">
+                                <button class="btn">Sign In</button>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end of navbar-->
+
+        <!--main div-->
+        <div class="container mb-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-6 order-1 order-sm-0">
+                    <img src="./Design/juice.png" alt="JuiceBox">
+                    <h1>Fastest Online</h1>
+                    <h1>Food Delivery Service</h1>
+                    <br>
+                    <p style="margin-bottom: 4px;">We are most fastest and favourite food delivery service all over the world.</p>
+                    <p>Search for your favourite food or restaurant in your area.</p>
+                    <br>
+                    <div class="input-group mb-5" style="min-height: 45px;">
+                        <span class="input-group-text"><i class="fa fa-search" style="border-right: none;"></i></span>
+                        <input type="text" placeholder="Search food or restaurants" class="form-control" style="border-left: none;">
+                        <button class="btn"><i class="fa fa-search"></i> Search</button>
+                    </div>
+                    <div class="row g-1 g-sm-4">
+                        <div class="col-4 mb-2">
+                            <div class="card align-items-center mainCard">
+                                <img src="./Design/card1.png" class="card-img-top" alt="Reviews">
+                                <div class="mb-3">
+                                    <p style="text-align: center;">15k Reviews<br>(4.8)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <div class="card align-items-center mainCard">
+                                <img src="./Design/card2.png" alt="restaurants" class="card-img-top" >
+                                <div class="mb-3">
+                                    <p style="text-align: center;">3000+<br>Restaurants</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <div class="card align-items-center mainCard">
+                                <img src="./Design/card3.png" alt="FoodItems" class="card-img-top">
+                                <div class="mb-3">
+                                    <p style="text-align: center;">9000+<br>Food Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 align-self-center order-0 order-sm-1">
+                    <img src="./Design/deliveryBoy.png" alt="Delivery Boy" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!--end of main-->
+
+        <!--burger-->
+        <div class="container-fluid mb-5 burger">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-12 col-sm-6 align-self-center order-1 order-sm-1">
+                        <h1>Limitted Offer By<br>Using Promocode<br>Only <span style="color: rgb(254, 202, 110);">$10</span></h1>
+                        <br>
+                        <span><button type="button" class="btn btn-primary" style="background-color: blue;">#burger10</button>&#160;&#160;<button type="button" class="btn">Copy</button></span>
+                    </div>
+                    <div class="col-12 col-sm-6 align-self-center order-0 order-sm-1">
+                        <img src="./Design/burger.png" alt="Burger" class="img-fluid" width="500px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of burger-->
+
+        <!--explore-->
+        <div class="container py-5" id="explore">
+            <h2 class="mb-5 mt-4">Explore Your Nearby Restaurants</h2>
+            <div class="row g-3">
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg);">
+                    <div class="textOverImg">Sky Dine</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://post.healthline.com/wp-content/uploads/2020/03/adhd-foods-to-avoid_thumb-732x549.jpg);">
+                    <div class="textOverImg">Platinum Lounge</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/09/plate-penne-pasta-tomato-sauce.jpg?fit=1200%2C879&ssl=1);">
+                    <div class="textOverImg">Eatopia</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4rBI6c7OdTl_7CcgkcOxVRCHvGEvKCGg1g&usqp=CAU);">
+                    <div class="textOverImg">Sip Coffee</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://greenbowl2soul.com/wp-content/uploads/2019/11/veg-chow-mein_f.jpg);">
+                    <div class="textOverImg">Tain Terrace</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F04%2F08%2Fchunky-vegetable-salad-ay-2000.jpg&q=85);">
+                    <div class="textOverImg">Kebab Garden</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-end" style="background-image: url(https://www.tasteofhome.com/wp-content/uploads/2018/01/Potato-Beer-Cheese-Soup_EXPS_SBZ19_71598_B09_14_1b.jpg);">
+                    <div class="textOverImg">Cafe La Vista</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="card align-items-center exCard d-flex justify-content-center" style="background-color: rgb(254, 202, 110);">
+                    <img src="./Design/explore.png" alt="exploreImg">
+                    <div class="textOverImg" style="color: black;">Explore More</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of explore-->
+
+        <!--Order-->
+        <div class="container-fluid mb-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-sm-7">
+                        <img src="./Design/orderImg.png" alt="OrderImage" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-sm-5">
+                        <h1 class="mb-3">A Very Simple Process<br>To Make Order Your<br>Favourite Foods</h1>
+                        <br>
+                        <div class="mb-4">
+                            <span><i class="fa fa-map-marker dot"></i>&#160;&#160;&#160;Set your location first</span>
+                        </div>
+                        <div class="mb-4">
+                            <span><i class="fa fa-check dot"></i>&#160;&#160;&#160;Choose the food you want to order</span>
+                        </div>
+                        <div class="mb-4">
+                            <span><i class="fa fa-file-invoice dot"></i>&#160;&#160;&#160;Confirm order with payment method</span>
+                        </div>
+                        <div class="mb-5">
+                            <span><i class="fa fa-pizza-slice dot"></i>&#160;&#160;&#160;Within 30 minutes you will get your food</span>
+                        </div>
+                        <button class="btn" type="button">Order Food Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of order-->
+
+        <!--favourites-->
+        <div class="container-fluid py-5 mb-5" id="food">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="py-5">Most Ordered Food in New York</h1>
+                </div>
+                <div id="orderCarousel" class="carousel slide py-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                      <!--carousel1-->
+                      <div class="carousel-item active" id="carousel1">
+                        <div class="container-fluid">
+                            <div class="row gx-5 gy-3">
+                                <!--item1-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pizza Pinniata</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$87</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item2-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://post.healthline.com/wp-content/uploads/2020/03/adhd-foods-to-avoid_thumb-732x549.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Doughnut</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>1901 Thornridge Cir.Shiloh, Hawai 81063</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$31</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item3-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/09/plate-penne-pasta-tomato-sauce.jpg?fit=1200%2C879&ssl=1" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pasta</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2464 Royal Ln. Mesa, New Jersey 45463</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$55</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item4-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4rBI6c7OdTl_7CcgkcOxVRCHvGEvKCGg1g&usqp=CAU" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Coffee</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>3517 W. Gray St. Utica, Pennsylvnia 57867</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$47</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item5-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://greenbowl2soul.com/wp-content/uploads/2019/11/veg-chow-mein_f.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Noodles</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$20</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item6-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F04%2F08%2Fchunky-vegetable-salad-ay-2000.jpg&q=85" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Salad</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2715 Ash Dr. San Jose, South Dakota 83475</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$90</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <!--carousel2-->
+                      <div class="carousel-item" id="carousel2">
+                        <div class="container-fluid">
+                            <div class="row gx-5 gy-3">
+                                <!--item1-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pizza Pinniata</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$87</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item2-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://post.healthline.com/wp-content/uploads/2020/03/adhd-foods-to-avoid_thumb-732x549.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Doughnut</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>1901 Thornridge Cir.Shiloh, Hawai 81063</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$31</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item3-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/09/plate-penne-pasta-tomato-sauce.jpg?fit=1200%2C879&ssl=1" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pasta</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2464 Royal Ln. Mesa, New Jersey 45463</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$55</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item4-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4rBI6c7OdTl_7CcgkcOxVRCHvGEvKCGg1g&usqp=CAU" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Coffee</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>3517 W. Gray St. Utica, Pennsylvnia 57867</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$47</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item5-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://greenbowl2soul.com/wp-content/uploads/2019/11/veg-chow-mein_f.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Noodles</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$20</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item6-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F04%2F08%2Fchunky-vegetable-salad-ay-2000.jpg&q=85" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Salad</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2715 Ash Dr. San Jose, South Dakota 83475</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$90</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <!--carousel3-->
+                      <div class="carousel-item" id="carousel3">
+                        <div class="container-fluid">
+                            <div class="row gx-5 gy-3">
+                                <!--item1-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pizza Pinniata</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$87</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item2-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://post.healthline.com/wp-content/uploads/2020/03/adhd-foods-to-avoid_thumb-732x549.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Doughnut</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>1901 Thornridge Cir.Shiloh, Hawai 81063</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$31</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item3-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/09/plate-penne-pasta-tomato-sauce.jpg?fit=1200%2C879&ssl=1" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Pasta</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2464 Royal Ln. Mesa, New Jersey 45463</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$55</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item4-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4rBI6c7OdTl_7CcgkcOxVRCHvGEvKCGg1g&usqp=CAU" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Coffee</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>3517 W. Gray St. Utica, Pennsylvnia 57867</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$47</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item5-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://greenbowl2soul.com/wp-content/uploads/2019/11/veg-chow-mein_f.jpg" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Noodles</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>6391 Elgin St. Celina, Delaware 10299</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$20</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--item6-->
+                                <div class="col-12 col-sm-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F04%2F08%2Fchunky-vegetable-salad-ay-2000.jpg&q=85" class="img-fluid">
+                                        </div>
+                                        <div class="col-8">
+                                            <h3>Salad</h3>
+                                            <i class="fa fa-map-marker me-3"></i><small>2715 Ash Dr. San Jose, South Dakota 83475</small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h4 class="mt-3">$90</h4>
+                                                <div>
+                                                    <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center carouselControl py-3">
+                    <button class="btn btnCarousel me-4 btnActive" id="btn1">1</button>
+                    <button class="btn btnCarousel me-4" id="btn2">2</button>
+                    <button class="btn btnCarousel me-4" id="btn3">3</button>
+                    <button class="btn">See More Foods</button>
+                </div>
+            </div>
+        </div>
+        <!--end of favourites-->
+
+        <!--delivery-->
+        <div class="container-fluid mb-5 deliveryBoy mt-5">
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-12 col-sm-4 align-self-center order-1 order-sm-1 py-3">
+                        <h1>Want To Earn Extra<br>With Us Join As a<br>Delivery Boy</h1>
+                        <br>
+                        <small>We are the fastest and favourite food delivery service all over the world. Search for your favourite food or restaurant in your area.</small><br><br>
+                        <button type="button" class="btn" style="background-color: grey;">Apply Now</button>
+                    </div>
+                    <div class="col-12 col-sm-8 d-flex justify-content-center order-0 order-sm-1">
+                        <img src="./Design/deliveryEarn.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of delivery-->
+
+        <!--mobile-->
+        <div class="container-fluid mb-4 mt-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-7 d-flex justify-content-center">
+                        <img src="./Design/mobile.png" alt="Order From Mobile" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-sm-5">
+                        <h1 class="mb-3">Its Now More Easy to<br>Order by Our Mobile App</h1>
+                        <br>
+                        <small>All you need to do is download one of the best food delivery apps, make a and most companies are opting for mobile app development for food delivery.</small>
+                        <br><br><br>    
+                        <button class="btn" type="button">Order Food Now</button>
+                    </div>
+                </div>
+        </div>
+        <!--end of mobile-->
+
+        <!--countries-->
+        <div class="container py-5 mb-sm-3">
+            <div class="row text-center">
+                <h1 class="py-5">We are available in</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/australia.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Australia</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/austria.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Austria</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/bahrain.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Bahrain</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/bangladesh.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Bangladesh</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/canada.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Canada</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/northern-cyprus.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Cyprus</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <img src="./Design/denmark.png" width="32px" class="img-fluid" style="float: left;">&#160;&#160;<h5 style="margin-bottom: 0;">Denmark</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="d-flex align-items-center p-2" style="border-radius: 8px;">
+                        <i class="fas fa-ellipsis-h dot" style="background-color: rgb(254, 202, 110);"></i></i>&#160;&#160;<h5 style="margin-bottom: 0;">More</h5>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!--end of countries-->
+
+        <!--footer-->
+        <div class="container p-5">
+            <div class="row gx-5 justify-content-evenly">
+                <div class="col-12 col-sm-3">
+                    <div class="d-flex align-items-center">
+                        <img src="./Design/restaurantLogo.png" alt="Logo" class="img-fluid" style="float:left;">
+                        <h4 style="margin: 0">Delivery Cube</h4>
+                    </div>
+                    <br>
+                    <small>All you need is to download one of the best food delivery apps.</small>
+                    <br>
+                    <div class="pt-4 d-flex justify-content-evenly d-sm-block">
+                        <a href="..." class="me-1"><i class="fa fa-facebook socials" style="padding: 0.5em 0.7em;"></i></a>
+                        <a href="..." class="me-1"><i class="fa fa-twitter socials"></i></a>
+                        <a href="..." class="me-1"><i class="fa fa-instagram socials" style="padding: 0.5em 0.6em;"></i></a>
+                        <a href="..." class="me-1"><i class="fa fa-youtube socials"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-2 pt-4">
+                    <h5>Service</h5>
+                    <ul class="list-unstyled pt-2">
+                        <li><small>Online order</small></li>
+                        <li><small>Pre-reservation</small></li>
+                        <li><small>24/7 Services</small></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-2 pt-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled pt-2">
+                        <li><small>Restaurants</small></li>
+                        <li><small>Reviews</small></li>
+                        <li><small>Blogs</small></li>
+                        <li><small>Order Foods</small></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-2 pt-4">
+                    <h5>About</h5>
+                    <ul class="list-unstyled pt-2">
+                        <li><small>Our Story</small></li>
+                        <li><small>Benifits</small></li>
+                        <li><small>Career</small></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-2 pt-4">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled pt-2">
+                        <li><small>Contact</small></li>
+                        <li><small>Support</small></li>
+                        <li><small>FAQ</small></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+        <div class="text-center">
+            <p>Made by Shreyas 🔥</p>
+        </div>
+
+        <!--Vendor js-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/114cef75f0.js" crossorigin="anonymous"></script>
+
+        <!--main JS-->
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
+
